@@ -1,4 +1,5 @@
 Summary:	A pager designed for blackbox
+Summary(pl):	Pager zaprojektowany dla blackboksa
 Name:		bbpager
 Version:	0.3.0
 Release:	1
@@ -9,6 +10,8 @@ Group(pl):	X11/Aplikacje
 Source0:	http://bbtools.windsofstorm.net/sources/%{name}-%{version}.tar.gz
 URL:		http://bbtools.windsofstorm.net/
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -19,6 +22,12 @@ bbpager is like the name suggests: a pager tool for Blackbox. For now
 it uses KDE wm-hints to get the information from Blackbox. So if you
 want to use it be sure to enable KDE support. This means you have to
 configure it with: ./configure --enable-kde.
+
+%description -l pl
+bbpager jest tym, co nazwa sugeruje: pagerem dla Blackboksa. Mo¿e
+u¿ywaæ KDE wm-hints do pobierania informacji od Blackboksa. Aby
+w³±czyæ wsparcie dla KDE, musi byæ skompilowany z ./configure
+--enable-kde.
 
 %prep
 %setup -q
