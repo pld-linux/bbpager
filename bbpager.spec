@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://bbtools.windsofstorm.net/sources/%{name}-%{version}.tar.gz
+# Source0-md5:	27e575bd87be25e2fe8a116412d933cc
 Patch0:		%{name}-sysconfdir.patch
 URL:		http://bbtools.windsofstorm.net/
 BuildRequires:	XFree86-devel
