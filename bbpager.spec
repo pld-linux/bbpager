@@ -29,7 +29,7 @@ bbpager jest tym, co nazwa sugeruje: pagerem dla Blackboksa.
 %build
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure
 %{__make} CXX="%{__cc}"
 
