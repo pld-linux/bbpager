@@ -1,8 +1,8 @@
 Summary:	A pager designed for blackbox
 Summary(pl):	Pager zaprojektowany dla blackboksa
 Name:		bbpager
-Version:	0.3.0
-Release:	5
+Version:	0.3.1
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://bbtools.windsofstorm.net/sources/%{name}-%{version}.tar.gz
@@ -30,7 +30,7 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure
-%{__make} CXX="%{__cc}"
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
