@@ -27,7 +27,7 @@ bbpager jest tym, co nazwa sugeruje: pagerem dla Blackboksa.
 %patch0 -p1
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
