@@ -6,8 +6,9 @@ License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
-Source0:	ftp://bbtools.windsofstorm.net/sources/%{name}-%{version}.tar.gz
+Source0:	http://bbtools.windsofstorm.net/sources/%{name}-%{version}.tar.gz
 URL:		http://bbtools.windsofstorm.net/
+BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -19,7 +20,6 @@ it uses KDE wm-hints to get the information from Blackbox. So if you
 want to use it be sure to enable KDE support. This means you have to
 configure it with: ./configure --enable-kde.
 
-
 %prep
 %setup -q
 %build
@@ -27,10 +27,11 @@ aclocal
 autoconf
 automake -a -c
 %configure
-%{__make}
+%{__make} CXX="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
 gzip -9nf README NEWS TODO data/README.*
