@@ -2,12 +2,13 @@ Summary:	A pager designed for blackbox
 Summary(pl):	Pager zaprojektowany dla blackboksa
 Name:		bbpager
 Version:	0.3.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	http://bbtools.windsofstorm.net/sources/%{name}-%{version}.tar.gz
+Patch0:		%{name}-sysconfdir.patch
 URL:		http://bbtools.windsofstorm.net/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -25,6 +26,7 @@ bbpager jest tym, co nazwa sugeruje: pagerem dla Blackboksa.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 aclocal
@@ -47,4 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz data/*.gz
 %attr(755,root,root) %{_bindir}/bb*
-%config %{_datadir}/bbtools/%{name}.*
+%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/bbtools/%{name}.*
