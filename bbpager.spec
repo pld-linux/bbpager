@@ -26,6 +26,7 @@ bbpager jest tym, co nazwa sugeruje: pagerem dla Blackboksa.
 
 %build
 rm -f missing
+cp -f /usr/share/automake/config.sub .
 %{__aclocal}
 %{__autoconf}
 %{__automake}
