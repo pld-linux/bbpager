@@ -2,7 +2,7 @@ Summary:	A pager designed for blackbox
 Summary(pl):	Pager zaprojektowany dla blackboksa
 Name:		bbpager
 Version:	0.3.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://bbtools.windsofstorm.net/sources/%{name}-%{version}.tar.gz
