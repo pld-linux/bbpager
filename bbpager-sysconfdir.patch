@@ -1,0 +1,21 @@
+diff -ur bbpager-0.3.0-orig/Makefile.am bbpager-0.3.0/Makefile.am
+--- bbpager-0.3.0-orig/Makefile.am	Sun Apr 16 08:21:39 2000
++++ bbpager-0.3.0/Makefile.am	Wed Jan 23 20:38:53 2002
+@@ -1,6 +1,6 @@
+ CPPFLAGS =	@CPPFLAGS@  @INTERLACE@ \
+-		-DGLOBAL_BB=\"$(datadir)/bbtools/bbpager.bb\" \
+-		-DGLOBAL_NOBB=\"$(datadir)/bbtools/bbpager.nobb\"
++		-DGLOBAL_BB=\"$(sysconfdir)/bbtools/bbpager.bb\" \
++		-DGLOBAL_NOBB=\"$(sysconfdir)/bbtools/bbpager.nobb\"
+ 
+ 
+ SUBDIRS = data
+diff -ur bbpager-0.3.0-orig/data/Makefile.am bbpager-0.3.0/data/Makefile.am
+--- bbpager-0.3.0-orig/data/Makefile.am	Fri Aug 20 13:13:30 1999
++++ bbpager-0.3.0/data/Makefile.am	Wed Jan 23 20:50:26 2002
+@@ -1,4 +1,4 @@
+-configdir = $(datadir)/bbtools
++configdir = $(sysconfdir)/bbtools
+ 
+ config_DATA =	bbpager.bb \
+ 		bbpager.nobb \
