@@ -1,5 +1,5 @@
 Summary:	A pager designed for blackbox
-Summary(pl):	Pager zaprojektowany dla blackboksa
+Summary(pl.UTF-8):   Pager zaprojektowany dla blackboksa
 Name:		bbpager
 Version:	0.3.1
 Release:	3
@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 bbpager is like the name suggests: a pager tool for Blackbox.
 
-%description -l pl
+%description -l pl.UTF-8
 bbpager jest tym, co nazwa sugeruje: pagerem dla Blackboksa.
 
 %prep
