@@ -1,5 +1,5 @@
 Summary:	A pager designed for blackbox
-Summary(pl.UTF-8):   Pager zaprojektowany dla blackboksa
+Summary(pl.UTF-8):	Pager zaprojektowany dla blackboksa
 Name:		bbpager
 Version:	0.3.1
 Release:	3
